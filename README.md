@@ -49,7 +49,7 @@ The TestDataUtil class provides methods for loading test data from JSON files.
 
 Example:
 ```java
-String payload = TestDataUtil.getPayloadFromJsonFile("ValidAdminUser.json");
+String payload = TestDataUtil.getPayloadFromJsonFile("UserData.json");
 ```
 
 6. **Running Tests**
