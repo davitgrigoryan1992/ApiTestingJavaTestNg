@@ -15,32 +15,42 @@ public class HttpClientUtil {
                 .header("Content-Type", "application/json")
                 .accept("application/json")
                 .body(payload)
-                .post(url);
+                .post(url)
+                .then()
+                .log().all()
+                .extract().response();
         logResponseDetails(response);
         return response;
     }
 
-    public static Response put(String endpoint, String payload) {
+    public static Response patch(String endpoint, String payload) {
         String url = ConfigManager.get("baseUrl") + endpoint;
-        logRequestDetails("PUT", url, payload);
+        logRequestDetails("PATCH", url, payload);
         Response response = given()
                 .log().all()
                 .header("Content-Type", "application/json")
                 .accept("application/json")
                 .body(payload)
-                .put(url);
+                .patch(url)
+                .then()
+                .log().all()
+                .extract().response();
         logResponseDetails(response);
         return response;
     }
 
-    public static Response delete(String endpoint) {
+    public static Response delete(String endpoint, String payload) {
         String url = ConfigManager.get("baseUrl") + endpoint;
         logRequestDetails("DELETE", url, null);
         Response response = given()
                 .log().all()
                 .header("Content-Type", "application/json")
                 .accept("application/json")
-                .delete(url);
+                .body(payload)
+                .delete(url)
+                .then()
+                .log().all()
+                .extract().response();
         logResponseDetails(response);
         return response;
     }
@@ -52,7 +62,10 @@ public class HttpClientUtil {
                 .log().all()
                 .header("Content-Type", "application/json")
                 .accept("application/json")
-                .get(url);
+                .get(url)
+                .then()
+                .log().all()
+                .extract().response();
         logResponseDetails(response);
         return response;
     }

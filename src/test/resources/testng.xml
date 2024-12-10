@@ -2,10 +2,10 @@
 <suite name="Parallel Test Suite" parallel="methods" thread-count="5">
     <test name="Test">
         <classes>
-            <class name="tests.CreateUserTest"/>
-            <class name="tests.DeleteUserTest"/>
-            <class name="tests.GetUserTest"/>
-            <class name="tests.UpdateUserTest"/>
+            <class name="tests.CreatePlayerTests"/>
+            <class name="tests.DeletePlayerTests"/>
+            <class name="tests.GetPlayerTests"/>
+            <class name="tests.UpdatePlayerTests"/>
         </classes>
     </test>
 </suite>

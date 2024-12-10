@@ -1,0 +1,13 @@
+{
+  "editorSupervisor": "supervisor",
+  "editorAdmin": "admin",
+  "editorUser": "user",
+  "age": 30,
+  "gender": "male",
+  "login": "newadmin",
+  "password": "admin123",
+  "role": "admin",
+  "screenName": "AdminUser",
+  "invalidId": 9999999,
+  "updatedScreenName": "UpdatedScreenName"
+}

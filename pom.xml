@@ -90,24 +90,10 @@
                         <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <parallel>methods</parallel>
-                    <threadCount>3</threadCount>
+                    <threadCount>5</threadCount>
                     <systemPropertyVariables>
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                     </systemPropertyVariables>
-                </configuration>
-            </plugin>
-
-            <!-- Surefire Plugin with dynamic thread count -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.1.2</version>
-                <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                    <parallel>methods</parallel>
-                    <threadCount>5</threadCount>
                 </configuration>
             </plugin>
 
