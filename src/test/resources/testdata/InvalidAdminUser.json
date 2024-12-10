@@ -1,0 +1,9 @@
+{
+  "editor": "supervisor",
+  "age": 15,
+  "gender": "male",
+  "login": "invalidadmin",
+  "password": "admin123",
+  "role": "admin",
+  "screenName": "InvalidUser"
+}
